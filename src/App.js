@@ -39,6 +39,24 @@ function App() {
     "Blankets",
     "Quilts",
   ];
+
+  return (
+    <div className="app">
+      <h1 style={{ textAlign: "center" }}>Home Essentials</h1>
+      <div className="items-row">
+        <div className="items-col">
+          <h3 id="kitchen-items">Kitchen Essentials</h3>
+          <ul>
+            {kitchenItemsPurchased.map((e, index) => (
+              <li id={"kitchenItems" + (index + 1)} key={e.toString()}>
+                {e}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
