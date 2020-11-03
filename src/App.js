@@ -40,15 +40,47 @@ function App() {
     "Quilts",
   ];
 
+  const flexStyle = { display: "flex", justifyContent: "space-around" };
+
   return (
     <div className="app">
       <h1 style={{ textAlign: "center" }}>Home Essentials</h1>
-      <div className="items-row">
-        <div className="items-col">
+      <div className="item-row" style={flexStyle}>
+        <div className="item-col">
           <h3 id="kitchen-items">Kitchen Essentials</h3>
           <ul>
             {kitchenItemsPurchased.map((e, index) => (
               <li id={"kitchenItems" + (index + 1)} key={e.toString()}>
+                {e}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="item-col">
+          <h3 id="utility-items">Utility</h3>
+          <ul>
+            {utilityItemsPurchased.map((e, index) => (
+              <li id={"utilityItems" + (index + 1)} key={e.toString()}>
+                {e}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="item-col">
+          <h3 id="decoration-items">Decorative Items</h3>
+          <ul>
+            {homeDecortemsPurchased.map((e, index) => (
+              <li id={"homeDecorationsItems" + (index + 1)} key={e.toString()}>
+                {e}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="item-col">
+          <h3 id="bedroom-items">Bedroom Items</h3>
+          <ul>
+            {bedroomItemsPurchased.map((e, index) => (
+              <li id={"bedroomItems" + (index + 1)} key={e.toString()}>
                 {e}
               </li>
             ))}
